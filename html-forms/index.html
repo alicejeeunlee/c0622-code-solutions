@@ -13,13 +13,15 @@
     <div class="emailinput">
       <input id="email" type="email" name="email" required>
     </div>
-    <p>Why is coding cool?</p>
-    <select name="coding" id="coding">
-      <option value="option">Select an option</option>
-      <option value="interesting">Because it's interesting</option>
-      <option value="fun">Because it's fun</option>
-      <option value="powerful">Because it's powerful</option>
-    </select>
+    <label for="coding">Why is coding cool?</label>
+    <div id="dropdownlist">
+      <select name="coding" id="coding">
+        <option value="option">Select an option</option>
+        <option value="interesting">Because it's interesting</option>
+        <option value="fun">Because it's fun</option>
+        <option value="powerful">Because it's powerful</option>
+      </select>
+    </div>
     <p>Favorite Language (choose one)</p>
     <input type="radio" name="language" value="HTML" id="HTML">
     <label for="HTML">HTML</label>
@@ -30,8 +32,12 @@
     <p>Would you like to sign up for more information?</p>
     <input type="checkbox" name="signup" value="signmeup" id="signup">
     <label for="signup">Sign me up!</label>
-    <p>Comments</p>
-    <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+    <div id="commentsection">
+      <label for="comments">Comments</label>
+      <div id="textarea">
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </div>
+    </div>
     <div class="submitbutton">
       <button>Submit</button>
     </div>
