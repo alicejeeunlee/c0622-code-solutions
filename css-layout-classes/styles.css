@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -12,19 +13,19 @@
 }
 
 .column-full {
-  width: 100%;
+  flex-basis: 100%;
 }
 
 .column-one-third {
-  width: 33%;
+  flex-basis: calc(100%/3);
 }
 
 .column-one-fourth {
-  width: 25%;
+  flex-basis: 25%;
 }
 
 .column-two-thirds {
-  width: 66%;
+  flex-basis: calc(200%/3);
 }
 
 img {
