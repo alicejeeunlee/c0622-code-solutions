@@ -1,0 +1,60 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-third {
+  flex-basis: calc(100%/3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.column-padding {
+  padding: 2.5rem;
+}
+
+.row-padding {
+  padding: 0 15rem;
+}
+
+.background {
+  background-color: rgb(25 150 218);
+  padding: 3rem 0 1rem;
+}
+
+.white-text {
+  color: white;
+}
+
+.gray-text {
+  color: rgb(221 221 221);
+}
+
+.font-lato {
+  font-family: Lato, sans-serif;
+}
+
+.white-circle {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+img {
+  width: 50%;
+}
