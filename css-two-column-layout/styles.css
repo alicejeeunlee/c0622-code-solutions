@@ -1,0 +1,88 @@
+.container {
+  max-width: 50%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
+
+.column-three-fourths {
+  flex-basis: calc(300%/4);
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: Karla, sans-serif;
+}
+
+h1 {
+  color: rgb(14 14 14);
+  font-size: 3.3rem;
+  letter-spacing: 6px;
+}
+
+h2 {
+  color: rgb(14 14 14);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.h2padding {
+  padding-right: 7rem;
+}
+
+p {
+  color: rgb(68 68 68);
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+}
+
+p.banner {
+  margin: 0 3rem;
+}
+
+.banner-style {
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  padding: 3rem 10rem;
+}
+
+button {
+  background-color: white;
+  color: rgb(209 76 69);
+  border: 2px solid rgb(209 76 69);
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 0.6rem 3rem;
+  margin: 2rem 6rem 2rem 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.column-boundary {
+  padding-right: 7.5rem;
+  margin: 2rem 0;
+}
+
+.intuitive-boundary {
+  padding-right: 7.6rem;
+  margin: 2rem 0;
+}
