@@ -1,0 +1,214 @@
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-two-thirds {
+  flex-basis: calc(200%/3);
+}
+
+.column-third {
+  flex-basis: calc(100%/3);
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
+
+.column-two-fifths {
+  flex-basis: calc(200%/5);
+}
+
+.column-three-fifths {
+  flex-basis: calc(300%/5);
+}
+
+.font-avenir {
+  font-family: Avenir, sans-serif;
+}
+
+.font-tiempos {
+  font-family: "Tiempos Headline", serif;
+}
+
+.lightgray-text {
+  color: rgb(160 160 160);
+}
+
+.gray-text {
+  color: rgb(110 110 110);
+}
+
+.white-text {
+  color: rgb(255 255 255);
+}
+
+.medium-text {
+  font-size: 18px;
+}
+
+.lightgray-background {
+  background-color: rgb(250 250 250);
+}
+
+.darkgray-background {
+  background-color: rgb(82 83 81);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.side-margin {
+  margin: 0 5rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.offset {
+  top: 0;
+  left: 0;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+footer {
+  padding: 2rem 0;
+}
+
+footer p {
+  display: inline;
+  padding-right: 1rem;
+}
+
+#blue-logo {
+  width: 150px;
+  margin: 1.5rem 0;
+}
+
+#nav-bar {
+  padding: 1rem 0 1rem 6rem;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(160 160 160);
+}
+
+.contact-us {
+  background-color: rgb(40 69 100);
+  color: white;
+  font-family: Avenir, sans-serif;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#hero-image {
+  width: 100%;
+}
+
+.hero-image-margin {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.overlay {
+  /* darken image */
+}
+
+h1 {
+  padding-right: 40rem;
+}
+
+.image-text {
+  padding-right: 34.5rem;
+  line-height: 1.7rem;
+}
+
+#clinicians {
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#clinicians p {
+  width: 500px;
+  margin: auto;
+}
+
+#location {
+  padding-bottom: 5rem;
+}
+
+.location-column {
+  margin: 0 8rem;
+}
+
+#location p {
+  line-height: 1.7rem;
+}
+
+#learn-more {
+  padding: 1rem 0;
+}
+
+#contact-info {
+  padding: 5rem;
+}
+
+#white-logo {
+  width: 150px;
+  margin: 1.5rem 0;
+}
+
+.address {
+  line-height: 7px;
+}
+
+.get-started {
+  background-color: rgb(40 69 100);
+  font-size: 18px;
+  color: white;
+  font-family: Avenir, sans-serif;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+}
