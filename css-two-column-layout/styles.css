@@ -50,10 +50,6 @@ p {
   line-height: 1.8rem;
 }
 
-p.banner {
-  margin: 0 3rem;
-}
-
 .banner-style {
   justify-content: center;
   margin: auto;
@@ -68,7 +64,6 @@ button {
   font-size: 14px;
   letter-spacing: 1px;
   padding: 0.6rem 3rem;
-  margin: 2rem 6rem 2rem 0;
 }
 
 .center {
@@ -79,11 +74,13 @@ button {
 }
 
 .column-boundary {
-  padding-right: 7.5rem;
   margin: 2rem 0;
 }
 
-.shrink-margin {
-  margin-top: -16px;
-  margin-bottom: 20px;
+.padding-right {
+  padding-right: 4rem;
+}
+
+.padding-left {
+  padding-left: 4rem;
 }
