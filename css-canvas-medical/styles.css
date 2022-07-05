@@ -256,10 +256,10 @@ header a {
 
 .get-started {
   background-color: rgb(40 69 100);
-  font-size: 22px;
   color: white;
-  font-family: Avenir, sans-serif;
   border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 22px;
   padding: 0.7rem 2.5rem;
 }
 
@@ -344,4 +344,29 @@ main img {
 
 #product q {
   margin-top: 5rem;
+}
+
+#get-in-touch input {
+  border: none;
+  display: block;
+  border-bottom: 1px solid rgb(151 151 151);
+  margin: auto;
+  text-align: center;
+}
+
+#get-in-touch textarea {
+  border: none;
+  border-bottom: 1px solid rgb(151 151 151);
+  font-family: Avenir, sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+#submit-button {
+  background-color: rgb(40 69 100);
+  color: white;
+  border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
 }
