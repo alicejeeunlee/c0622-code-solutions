@@ -127,7 +127,7 @@ footer p {
   padding: 1rem 0 1rem 6rem;
 }
 
-a {
+header a {
   outline: none;
   text-decoration: none;
   color: rgb(160 160 160);
@@ -210,7 +210,7 @@ a {
 }
 
 .index-h1-padding {
-  padding-right: 40rem;
+  padding-right: 38rem;
 }
 
 .implementation-h1-padding {
@@ -306,4 +306,42 @@ p.address {
 
 #calculate > div {
   margin-bottom: 9rem;
+}
+
+.vertical-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+main img {
+  width: 93%;
+}
+
+.product-text-left-padding {
+  padding-left: 6.5rem;
+}
+
+.product-text-right-padding {
+  padding-right: 6.5rem;
+}
+
+#product h2 {
+  color: rgb(80 81 80);
+  font-size: 32px;
+  font-weight: 50;
+}
+
+#product p {
+  color: rgb(80 81 80);
+  line-height: 1.5rem;
+}
+
+#product a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(80 81 80);
+}
+
+#product q {
+  margin-top: 5rem;
 }
