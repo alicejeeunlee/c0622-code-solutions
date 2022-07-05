@@ -150,7 +150,7 @@ a {
   padding: 0.5rem;
 }
 
-.hero-image {
+.hero-image-index {
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: center;
@@ -168,6 +168,15 @@ a {
   margin: 5rem 0;
 }
 
+.hero-image-product {
+  background-image: url("images/product/product-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 5rem 0;
+}
+
 .index-image-offset {
   top: 2rem;
   left: 4rem;
@@ -178,7 +187,16 @@ a {
   left: 4rem;
 }
 
+.product-image-offset {
+  top: 9rem;
+  left: 5rem;
+}
+
 .implementation-image-margin {
+  margin-top: 3rem;
+}
+
+.product-image-margin {
   margin-top: 3rem;
 }
 
@@ -199,8 +217,17 @@ a {
   padding-right: 30rem;
 }
 
+.product-h1-padding {
+  padding-right: 30rem;
+}
+
 .image-text {
   padding-right: 28.5rem;
+  line-height: 1.7rem;
+}
+
+.product-image-text {
+  padding-right: 26rem;
   line-height: 1.7rem;
 }
 
