@@ -124,7 +124,7 @@ footer p {
 }
 
 #nav-bar {
-  padding: 1rem 0 1rem 6rem;
+  padding: 1rem 0 1rem 3rem;
 }
 
 header a {
@@ -346,27 +346,61 @@ main img {
   margin-top: 5rem;
 }
 
+#get-in-touch h1 {
+  font-weight: 25;
+  color: rgb(79 81 79);
+}
+
+#get-in-touch p {
+  font-size: 20px;
+  line-height: 1.8rem;
+  padding-right: 10rem;
+}
+
+.tel {
+  font-weight: 100;
+  color: rgb(11 66 101);
+}
+
+#get-in-touch {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 #get-in-touch input {
   border: none;
   display: block;
   border-bottom: 1px solid rgb(151 151 151);
   margin: auto;
   text-align: center;
+  width: 100%;
+  padding: 3rem 0 1rem;
+}
+
+#get-in-touch input::placeholder,
+textarea::placeholder {
+  font-family: Avenir, sans-serif;
+  font-size: 20px;
+  color: rgb(211 209 207);
 }
 
 #get-in-touch textarea {
   border: none;
   border-bottom: 1px solid rgb(151 151 151);
-  font-family: Avenir, sans-serif;
   margin: auto;
+  width: 100%;
   text-align: center;
+  padding: 3rem 3.5rem 4rem;
+  overflow: hidden;
 }
 
-#submit-button {
+.submit {
   background-color: rgb(40 69 100);
   color: white;
   border-radius: 5px;
   font-family: Avenir, sans-serif;
   font-size: 18px;
   padding: 0.5rem 1rem;
+  margin: auto;
+  margin-top: 2rem;
 }
