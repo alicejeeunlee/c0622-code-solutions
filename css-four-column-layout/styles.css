@@ -1,0 +1,51 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+* {
+  font-family: Barlow, sans-serif;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h1,
+h2,
+p {
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+img.screen {
+  width: 100%;
+}
+
+img.icon {
+  width: 20%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
