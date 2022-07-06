@@ -43,6 +43,10 @@
   font-family: "Tiempos Headline", serif;
 }
 
+.darkgray-text {
+  color: rgb(80 81 80);
+}
+
 .lightgray-text {
   color: rgb(160 160 160);
 }
@@ -177,6 +181,12 @@ header a {
   margin: 5rem 0;
 }
 
+.blog1 {
+  background-image: url("images/blog/blog-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .index-image-offset {
   top: 2rem;
   left: 4rem;
@@ -277,7 +287,7 @@ p.address {
 }
 
 #calculate h2 {
-  color: rgb(80 81 79);
+  color: rgb(80 81 80);
   font-size: 32px;
   font-weight: 50;
   margin: auto;
@@ -285,21 +295,21 @@ p.address {
 }
 
 #calculate h3 {
-  color: rgb(80 81 79);
+  color: rgb(80 81 80);
   padding-left: 13.5rem;
   font-weight: 100;
   margin-bottom: auto;
 }
 
 #calculate span {
-  color: rgb(80 81 79);
+  color: rgb(80 81 80);
   font-size: 2rem;
   font-weight: 100;
   padding-right: 1rem;
 }
 
 #calculate p {
-  color: rgb(80 81 79);
+  color: rgb(80 81 80);
   padding: 0 13.5rem;
   line-height: 1.4rem;
 }
@@ -367,7 +377,7 @@ main img {
   margin-bottom: 6rem;
 }
 
-#get-in-touch input {
+input {
   border: none;
   display: block;
   border-bottom: 1px solid rgb(151 151 151);
@@ -377,7 +387,7 @@ main img {
   padding: 3rem 0 1rem;
 }
 
-#get-in-touch input::placeholder,
+input::placeholder,
 textarea::placeholder {
   font-family: Avenir, sans-serif;
   font-size: 20px;
@@ -403,4 +413,54 @@ textarea::placeholder {
   padding: 0.5rem 1rem;
   margin: auto;
   margin-top: 2rem;
+}
+
+.subscribe {
+  background-color: rgb(40 69 100);
+  border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 2.5rem;
+  margin: auto;
+  margin-top: 2rem;
+  color: white;
+}
+
+.weight-100 {
+  font-weight: 100;
+}
+
+.blue-text {
+  color: rgb(21 81 118);
+}
+
+.medical-news-padding {
+  padding: 4rem 16.5rem;
+}
+
+.blog-side-padding {
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.blog-title-padding {
+  padding-right: 5.5rem;
+}
+
+#blog img {
+  width: 100%;
+  height: 51%;
+  object-fit: cover;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.blog-padding-right {
+  padding-right: 1rem;
+}
+
+.blog-padding-left {
+  padding-left: 1rem;
 }
