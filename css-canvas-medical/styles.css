@@ -181,6 +181,15 @@ header a {
   margin: 5rem 0;
 }
 
+.hero-image-about-us {
+  background-image: url("images/about-us/about-us-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 5rem 0;
+}
+
 .blog1 {
   background-image: url("images/blog/blog-1.jpg");
   background-size: cover;
@@ -200,6 +209,11 @@ header a {
 .product-image-offset {
   top: 9rem;
   left: 5rem;
+}
+
+.about-us-image-offset {
+  top: 9rem;
+  left: 4rem;
 }
 
 .implementation-image-margin {
@@ -231,6 +245,10 @@ header a {
   padding-right: 30rem;
 }
 
+.about-us-h1-padding {
+  padding-right: 29rem;
+}
+
 .image-text {
   padding-right: 28.5rem;
   line-height: 1.7rem;
@@ -238,6 +256,11 @@ header a {
 
 .product-image-text {
   padding-right: 26rem;
+  line-height: 1.7rem;
+}
+
+.about-us-image-text {
+  padding-right: 28rem;
   line-height: 1.7rem;
 }
 
@@ -463,4 +486,12 @@ textarea::placeholder {
 
 .blog-padding-left {
   padding-left: 1rem;
+}
+
+.about-us-padding {
+  padding: 0 19rem 4rem;
+}
+
+.p-line-height {
+  line-height: 1.5rem;
 }
