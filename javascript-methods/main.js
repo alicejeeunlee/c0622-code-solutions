@@ -41,7 +41,7 @@ var css = {
 };
 library.push(js);
 library.unshift(css);
-library.splice(0, 1);
+library.splice(1, 1);
 console.log('library:', library);
 
 var fullName = 'Alice Lee';
