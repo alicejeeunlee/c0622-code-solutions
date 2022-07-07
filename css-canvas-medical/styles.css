@@ -187,7 +187,7 @@ header a {
   background-position: center;
   position: relative;
   padding: 16rem 0;
-  margin: 5rem 0;
+  margin: 6rem 0 3rem;
 }
 
 .blog1 {
@@ -488,10 +488,44 @@ textarea::placeholder {
   padding-left: 1rem;
 }
 
-.about-us-padding {
-  padding: 0 19rem 4rem;
+#what-we-believe {
+  padding: 0 19rem 5rem;
+}
+
+#our-story {
+  padding: 3rem 19rem 6rem;
 }
 
 .p-line-height {
   line-height: 1.5rem;
+}
+
+#our-team {
+  padding-top: 2rem;
+}
+
+.team-members-padding {
+  padding-bottom: 5rem;
+}
+
+#team-members img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+#team-members p {
+  padding: 0 1rem;
+}
+
+#clinical-advisory-board > div {
+  padding: 0 1rem;
+}
+
+#clinical-advisory-board {
+  padding-bottom: 7rem;
 }
