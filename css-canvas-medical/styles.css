@@ -146,12 +146,13 @@ header a {
   border-top: 2px solid rgb(230 233 236);
 }
 
-.contact-us {
+#contact-us {
   background-color: rgb(40 69 100);
   color: white;
   font-family: Avenir, sans-serif;
+  font-size: 16px;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.8rem 1rem;
 }
 
 .hero-image-index {
@@ -294,6 +295,7 @@ header a {
   font-family: Avenir, sans-serif;
   font-size: 22px;
   padding: 0.7rem 2.5rem;
+  border-style: none;
 }
 
 #contact-info {
@@ -436,6 +438,7 @@ textarea::placeholder {
   padding: 0.5rem 1rem;
   margin: auto;
   margin-top: 2rem;
+  border-style: none;
 }
 
 .subscribe {
@@ -447,6 +450,7 @@ textarea::placeholder {
   margin: auto;
   margin-top: 2rem;
   color: white;
+  border-style: none;
 }
 
 .weight-100 {
