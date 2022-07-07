@@ -1,0 +1,64 @@
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.colum-fifth {
+  flex-basis: 20%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.black-text {
+  color: rgb(0 0 0);
+}
+
+.gray-text {
+  color: rgb(220 220 220);
+}
+
+.item {
+  border-right: 1px solid rgb(222 222 222);
+  padding-right: 0.3rem;
+}
+
+.size {
+  margin-left: 0.3rem;
+}
+
+.price {
+  background-color: rgb(255 241 231);
+  margin-right: 0.3rem;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 30rem;
+}
+
+.side-margin {
+  margin: 0 1rem;
+}
