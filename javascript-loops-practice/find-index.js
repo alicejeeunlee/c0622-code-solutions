@@ -10,13 +10,12 @@ return none | if no item in array is === value
 */
 
 function findIndex(array, value) {
-  var none = -1;
+  var index = -1;
   for (var i = 0; i < array.length; i++) {
-    var index = -1;
     if (array[i] === value) {
       index = i;
       return index;
     }
   }
-  return none;
+  return index;
 }
