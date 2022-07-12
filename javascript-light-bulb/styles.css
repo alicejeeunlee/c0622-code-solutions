@@ -1,0 +1,44 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-third {
+  flex-basis: calc(100%/3);
+}
+
+.center {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.bulb {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.off {
+  background-color: rgb(34 34 35);
+}
+
+.light-off {
+  background-color: rgb(17 17 17);
+}
+
+.on {
+  background-color: rgb(250 234 132);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px rgb(253 242 191);
+}
+
+.light-on {
+  background-color: rgb(254 249 241);
+}
