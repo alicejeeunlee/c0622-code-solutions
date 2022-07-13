@@ -54,7 +54,7 @@ h2 {
 .dark {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background: rgb(50 50 50 / 90%);
   top: 0;
   right: 0;
