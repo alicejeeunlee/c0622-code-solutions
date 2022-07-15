@@ -1,0 +1,535 @@
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-two-thirds {
+  flex-basis: calc(200%/3);
+}
+
+.column-third {
+  flex-basis: calc(100%/3);
+}
+
+.column-fourth {
+  flex-basis: 25%;
+}
+
+.column-two-fifths {
+  flex-basis: calc(200%/5);
+}
+
+.column-three-fifths {
+  flex-basis: calc(300%/5);
+}
+
+.font-avenir {
+  font-family: Avenir, sans-serif;
+}
+
+.font-tiempos {
+  font-family: "Tiempos Headline", serif;
+}
+
+.darkgray-text {
+  color: rgb(80 81 80);
+}
+
+.lightgray-text {
+  color: rgb(160 160 160);
+}
+
+.gray-text {
+  color: rgb(110 110 110);
+}
+
+.white-text {
+  color: rgb(255 255 255);
+}
+
+.medium-text {
+  font-size: 18px;
+}
+
+.lightgray-background {
+  background-color: rgb(250 250 250);
+}
+
+.darkgray-background {
+  background-color: rgb(82 83 81);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.side-padding {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+footer p {
+  display: inline;
+  padding-right: 1rem;
+}
+
+.logo {
+  width: 150px;
+  margin: 1.5rem 0;
+}
+
+#nav-bar {
+  padding: 1rem 0 1rem 3rem;
+}
+
+header a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(160 160 160);
+  padding: 0 1rem;
+}
+
+.bottom-border {
+  border-bottom: 2px solid rgb(230 233 236);
+}
+
+.top-border {
+  border-top: 2px solid rgb(230 233 236);
+}
+
+#contact-us {
+  background-color: rgb(40 69 100);
+  color: white;
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+}
+
+.hero-image-index {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 5rem 0;
+}
+
+.hero-image-implementation {
+  background-image: url("images/implementation/implementation-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 5rem 0;
+}
+
+.hero-image-product {
+  background-image: url("images/product/product-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 5rem 0;
+}
+
+.hero-image-about-us {
+  background-image: url("images/about-us/about-us-header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 16rem 0;
+  margin: 6rem 0 3rem;
+}
+
+.blog1 {
+  background-image: url("images/blog/blog-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.index-image-offset {
+  top: 2rem;
+  left: 4rem;
+}
+
+.implementation-image-offset {
+  top: 5rem;
+  left: 4rem;
+}
+
+.product-image-offset {
+  top: 9rem;
+  left: 5rem;
+}
+
+.about-us-image-offset {
+  top: 9rem;
+  left: 4rem;
+}
+
+.implementation-image-margin {
+  margin-top: 3rem;
+}
+
+.product-image-margin {
+  margin-top: 3rem;
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 25%), rgb(0 0 0 /25%));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.index-h1-padding {
+  padding-right: 38rem;
+}
+
+.implementation-h1-padding {
+  padding-right: 30rem;
+}
+
+.product-h1-padding {
+  padding-right: 30rem;
+}
+
+.about-us-h1-padding {
+  padding-right: 29rem;
+}
+
+.image-text {
+  padding-right: 28.5rem;
+  line-height: 1.7rem;
+}
+
+.product-image-text {
+  padding-right: 26rem;
+  line-height: 1.7rem;
+}
+
+.about-us-image-text {
+  padding-right: 28rem;
+  line-height: 1.7rem;
+}
+
+#clinicians-prefer-canvas {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+#clinicians {
+  padding-bottom: 4rem;
+}
+
+#clinicians p {
+  width: 500px;
+  margin: auto;
+}
+
+#location p {
+  line-height: 1.7rem;
+}
+
+#learn-more {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.get-started {
+  background-color: rgb(40 69 100);
+  color: white;
+  border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 22px;
+  padding: 0.7rem 2.5rem;
+  border-style: none;
+}
+
+#contact-info {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+p.address {
+  line-height: 0.7rem;
+}
+
+.address {
+  line-height: 7px;
+}
+
+#calculate h2 {
+  color: rgb(80 81 80);
+  font-size: 32px;
+  font-weight: 50;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+#calculate h3 {
+  color: rgb(80 81 80);
+  padding-left: 13.5rem;
+  font-weight: 100;
+  margin-bottom: auto;
+}
+
+#calculate span {
+  color: rgb(80 81 80);
+  font-size: 2rem;
+  font-weight: 100;
+  padding-right: 1rem;
+}
+
+#calculate p {
+  color: rgb(80 81 80);
+  padding: 0 13.5rem;
+  line-height: 1.4rem;
+}
+
+#calculate > div {
+  margin-bottom: 9rem;
+}
+
+.vertical-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+main img {
+  width: 93%;
+}
+
+.product-text-left-padding {
+  padding-left: 6.5rem;
+}
+
+.product-text-right-padding {
+  padding-right: 6.5rem;
+}
+
+#product h2 {
+  color: rgb(80 81 80);
+  font-size: 32px;
+  font-weight: 50;
+}
+
+#product p {
+  color: rgb(80 81 80);
+  line-height: 1.5rem;
+}
+
+#product a {
+  outline: none;
+  text-decoration: none;
+  color: rgb(80 81 80);
+}
+
+#product q {
+  margin-top: 5rem;
+}
+
+#get-in-touch h1 {
+  font-weight: 25;
+  color: rgb(79 81 79);
+}
+
+#get-in-touch p {
+  font-size: 20px;
+  line-height: 1.8rem;
+  padding-right: 10rem;
+}
+
+.tel {
+  font-weight: 100;
+  color: rgb(11 66 101);
+}
+
+#get-in-touch {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+input {
+  border: none;
+  display: block;
+  border-bottom: 1px solid rgb(151 151 151);
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  padding: 3rem 0 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: Avenir, sans-serif;
+  font-size: 20px;
+  color: rgb(211 209 207);
+}
+
+#get-in-touch textarea {
+  border: none;
+  border-bottom: 1px solid rgb(151 151 151);
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 3.5rem 4rem;
+  overflow: hidden;
+}
+
+.submit {
+  background-color: rgb(40 69 100);
+  color: white;
+  border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  margin: auto;
+  margin-top: 2rem;
+  border-style: none;
+}
+
+.subscribe {
+  background-color: rgb(40 69 100);
+  border-radius: 5px;
+  font-family: Avenir, sans-serif;
+  font-size: 18px;
+  padding: 0.5rem 2.5rem;
+  margin: auto;
+  margin-top: 2rem;
+  color: white;
+  border-style: none;
+}
+
+.weight-100 {
+  font-weight: 100;
+}
+
+.blue-text {
+  color: rgb(21 81 118);
+}
+
+.medical-news-padding {
+  padding: 4rem 16.5rem;
+}
+
+.blog-side-padding {
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.blog-title-padding {
+  padding-right: 5.5rem;
+}
+
+#blog img {
+  width: 100%;
+  height: 51%;
+  object-fit: cover;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.blog-padding-right {
+  padding-right: 1rem;
+}
+
+.blog-padding-left {
+  padding-left: 1rem;
+}
+
+#what-we-believe {
+  padding: 0 19rem 5rem;
+}
+
+#our-story {
+  padding: 3rem 19rem 6rem;
+}
+
+.p-line-height {
+  line-height: 1.5rem;
+}
+
+#our-team {
+  padding-top: 2rem;
+}
+
+.team-members-padding {
+  padding-bottom: 5rem;
+}
+
+#team-members img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+#team-members p {
+  padding: 0 1rem;
+}
+
+#clinical-advisory-board > div {
+  padding: 0 1rem;
+}
+
+#clinical-advisory-board {
+  padding-bottom: 7rem;
+}
