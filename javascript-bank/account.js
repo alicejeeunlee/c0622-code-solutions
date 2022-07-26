@@ -14,7 +14,6 @@ function isPositiveInteger(number) {
 }
 
 Account.prototype.deposit = function (amount) {
-// with reusable function
   if (!isPositiveInteger(amount)) {
     return false;
   } else {
@@ -24,8 +23,7 @@ Account.prototype.deposit = function (amount) {
 };
 
 Account.prototype.withdraw = function (amount) {
-// with conditional
-  if (amount <= 0 || !Number.isInteger(amount)) {
+  if (!isPositiveInteger(amount)) {
     return false;
   } else {
     this.transactions.push(new Transaction('withdrawal', amount));
