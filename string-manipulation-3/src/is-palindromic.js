@@ -1,10 +1,11 @@
 /* exported isPalindromic */
+
+// remove spaces
+// loop through half of the string
+// check each position between the first (going forward) and last (going backward) character
+
 function isPalindromic(string) {
-
-  // loop through half of the string
-  // check each position
-  // between the first (forward) and the last character (backward)
-
+  string = string.replaceAll(' ', '');
   for (let i = 0; i < string.length / 2; i++) {
 
     if (string[i] !== string[string.length - 1 - i]) {
