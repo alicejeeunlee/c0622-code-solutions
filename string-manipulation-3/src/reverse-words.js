@@ -5,10 +5,15 @@
 // concatenate each string[i] into reversed
 // return reversed
 
-function reverseWords(string) {
-  var reversed = '';
-  for (var i = string.length - 1; i >= 0; i--) {
-    reversed += string[i];
-  }
-  return reversed;
-}
+// function reverseWords(string) {
+//   var words = string.split(' ');
+//   var reversedWords = [];
+//   for (var i = 0; i < words.length; i++) {
+//     var toReverse = '';
+//     for (var k = string.length - 1; k >= 0; k--) {
+//       reversed += string[k];
+//     }
+//   }
+
+//   return reversed;
+// }

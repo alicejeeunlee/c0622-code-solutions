@@ -1,48 +1,37 @@
 /* exported isAnagram */
 
 // remove spaces on all strings
-// create hashmap for both words, based on a counter
-// this check for duplicates since if all letters are the same, we will end up with 0
+// if length of first and second string is not equal cannot be an anagram
+// create hashtable for firstString with all letters accounted for as properties
+// loop through all letters in firstString
+//  if there is no property for the current letter
+//     make property named that letter assigned to zero
+//  increment value if letter is present in hashtable
+// loop through all letters in secondString
+//  if letter is not in hashTable
+//    return false
+//  decrement value of letter in hashTable
+// loop runs completely return true
 
 function isAnagram(firstString, secondString) {
   firstString = firstString.replaceAll(' ', '');
   secondString = secondString.replaceAll(' ', '');
   if (firstString.length !== secondString.length) return false;
-
-  var letters = {};
+  var hashTable = {};
 
   for (var i = 0; i < firstString.length; i++) {
-    if (letters[firstString[i]] !== null) {
-      letters[firstString[i]] += 1;
-    } else {
-      letters[firstString[i]] = 1;
+    if (!hashTable[firstString[i]]) {
+      hashTable[firstString[i]] = 0;
     }
-    letters[secondString[i]] = letters[secondString[i]] ? letters[secondString[i]] - 1 : -1;
+    hashTable[firstString[i]]++;
   }
 
-  for (var letter in letters) {
-    if (letters[letter] !== 0) {
+  for (var j = 0; j < secondString.length; j++) {
+    if (!hashTable[secondString[j]]) {
       return false;
     }
+    hashTable[secondString[j]]--;
   }
+
   return true;
 }
-
-//   var first = {};
-//   var second = {};
-
-//   for (let i = 0; i < firstString.length; i++) {
-//     if (first[firstString[i]] === !first[firstString[i]]) {
-//       first[firstString[i]] = first[firstString[i]] + 1;
-//     } else {
-//       first[firstString[i]] = 1;
-//     }
-//   }
-//   for (var letter in first) {
-//     if (first[letter] !== 0) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
-// };
