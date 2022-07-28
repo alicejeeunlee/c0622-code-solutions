@@ -1,0 +1,27 @@
+.carousel {
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.icon-wrapper {
+  padding: 0 17rem;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
