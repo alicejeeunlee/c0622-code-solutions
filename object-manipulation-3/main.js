@@ -50,10 +50,15 @@ function makeDeck() {
 //   create score variable initiated to 0 to keep track of total score
 //   add to score based on value of each card in hand
 // initiate winner to first player
+// create var breakTie and initiate to empty array to hold name of tied players
 //   loop through player list
 //     if winner score is less than current player score,
 //       reassign winner to current player
-// console.log winner
+//     else if winner score is equal to any player's score and is not the same player
+//       push both players name to breakTie
+//   if there are no names in breakTie array
+//       console log winner
+//   else playGame again with players in breakTie
 
 function playGame(players, numOfCards) {
   var playerList = [];
@@ -69,7 +74,7 @@ function playGame(players, numOfCards) {
       index++;
     }
   }
-  console.log(playerList);
+  console.log('playerList:', playerList);
   var cardPoint = {
     ace: 11,
     king: 10,
@@ -87,17 +92,27 @@ function playGame(players, numOfCards) {
   };
   for (var x = 0; x < playerList.length; x++) {
     var score = 0;
-    score += cardPoint[playerList[x].hand[0].rank];
-    score += cardPoint[playerList[x].hand[1].rank];
+    for (var z = 0; z < playerList[x].hand.length; z++) {
+      score += cardPoint[playerList[x].hand[z].rank];
+    }
     playerList[x].score = score;
   }
   var winner = playerList[0];
+  var breakTie = [];
   for (var y = 0; y < playerList.length; y++) {
     if (winner.score < playerList[y].score) {
       winner = playerList[y];
+    } else if (winner.score === playerList[y].score && (winner.name !== playerList[y].name)) {
+      breakTie.push(winner.name);
+      breakTie.push(playerList[y].name);
     }
   }
-  console.log('WINNER!', winner.name);
+  console.log('breakTie:', breakTie);
+  if (breakTie.length === 0) {
+    console.log('WINNER!', winner.name);
+  } else {
+    playGame(breakTie, numOfCards);
+  }
 }
 
 playGame(['Donatello', 'Leonardo', 'Michaelangelo', 'Raphael'], 2);
