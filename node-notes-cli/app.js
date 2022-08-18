@@ -36,4 +36,18 @@ if (process.argv[2] === 'read') {
       if (err) throw err;
     });
   });
+} else if (process.argv[2] === 'delete') {
+  fs.readFile('./data.json', 'utf8', (err, data) => {
+    if (err) throw err;
+    const id = process.argv[3];
+    const dataModel = require('./data.json');
+    const notes = dataModel.notes;
+    delete notes[id];
+    console.log(dataModel);
+    const JSONdata = JSON.stringify(dataModel, null, 2);
+    console.log(typeof JSONdata, JSONdata);
+    fs.writeFile('data.json', JSONdata, err => {
+      if (err) throw err;
+    });
+  });
 }
