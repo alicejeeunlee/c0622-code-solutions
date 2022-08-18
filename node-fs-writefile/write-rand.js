@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-const randomNum = Math.random();
-fs.writeFile('random.txt', `${randomNum.toString()} \n`, err => {
+fs.writeFile('random.txt', `${Math.random().toString()} \n`, err => {
   if (err) throw err;
 });
