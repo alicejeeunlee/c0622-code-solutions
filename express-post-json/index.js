@@ -1,12 +1,11 @@
 const express = require('express');
-
 const app = express();
 
-const gradesArray = [];
 let nextId = 1;
 const grades = {};
 
 app.get('/api/grades', (req, res) => {
+  const gradesArray = [];
   for (const key in grades) {
     gradesArray.push(grades[key]);
   }
@@ -17,9 +16,9 @@ app.use(express.json());
 
 app.post('/api/grades', (req, res) => {
   req.body.id = nextId;
-  grades.nextId = req.body;
+  res.status(201).json(req.body);
+  grades[nextId] = req.body;
   nextId++;
-  res.json(req.body);
 });
 
 app.listen(3000, () => {
