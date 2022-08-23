@@ -16,10 +16,10 @@ app.get('/api/notes', (req, res) => {
 
 app.get('/api/notes/:id', (req, res) => {
   const id = Number(req.params.id);
-  if (!(id)) {
-    return res.status(400).send({ error: 'id must be a positive integer' });
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).send({ error: 'ID must be a positive integer.' });
   } else if (!dataJSON.notes[id]) {
-    res.status(404).send({ error: `Cannot find note with id ${id}` });
+    res.status(404).send({ error: `Cannot find note with ID ${id}.` });
   } else if (dataJSON.notes[id]) {
     res.status(200).send(dataJSON.notes[id]);
   }
@@ -27,7 +27,7 @@ app.get('/api/notes/:id', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
   if (req.body.content === undefined) {
-    res.status(400).json({ error: 'content is a required field' });
+    res.status(400).json({ error: 'Content is a required field.' });
   } else if (req.body.content !== undefined) {
     const currentID = dataJSON.nextId;
     req.body.id = currentID;
@@ -50,10 +50,10 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const id = Number(req.params.id);
-  if (!(id)) {
-    return res.status(400).send({ error: 'id must be a positive integer' });
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).send({ error: 'ID must be a positive integer.' });
   } else if (!dataJSON.notes[id]) {
-    res.status(404).send({ error: `Cannot find note with id ${id}` });
+    res.status(404).send({ error: `Cannot find note with ID ${id}.` });
   } else if (dataJSON.notes[id]) {
     delete dataJSON.notes[id];
     const newJSONData = JSON.stringify(dataJSON, null, 2);
@@ -62,7 +62,29 @@ app.delete('/api/notes/:id', (req, res) => {
         console.error(err);
         res.status(500).send({ error: 'An unexpected error occured.' });
       } else {
-        res.status(204).send();
+        res.status(204).end();
+      }
+    });
+  }
+});
+
+app.put('/api/notes/:id', (req, res) => {
+  const id = Number(req.params.id);
+  if (!Number.isInteger(id) || id <= 0) {
+    res.status(400).send({ error: 'ID must be a positive integer.' });
+  } else if (req.body.content === undefined) {
+    res.status(400).send({ error: 'Content is a required field.' });
+  } else if (!dataJSON.notes[id]) {
+    res.status(404).send({ error: `Cannot find note with ID ${id}.` });
+  } else if (dataJSON.notes[id] && req.body.content !== undefined) {
+    dataJSON.notes[id].content = req.body.content;
+    const newJSONData = JSON.stringify(dataJSON, null, 2);
+    fs.writeFile('./data.json', newJSONData, err => {
+      if (err) {
+        console.error(err);
+        res.status(500).send({ error: 'An unexpected error occured.' });
+      } else {
+        res.status(200).send(dataJSON.notes[id]);
       }
     });
   }
