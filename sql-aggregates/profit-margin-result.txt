@@ -1,0 +1,9 @@
+       title       |                                                    description                                                    | rating | totalProfit 
+-------------------+-------------------------------------------------------------------------------------------------------------------+--------+-------------
+ Titans Jerk       | A Unbelieveable Panorama of a Feminist And a Sumo Wrestler who must Challenge a Technical Writer in Ancient China | PG     |      105.79
+ Maiden Home       | A Lacklusture Saga of a Moose And a Teacher who must Kill a Forensic Psychologist in A MySQL Convention           | PG     |      103.82
+ Videotape Arsenic | A Lacklusture Display of a Girl And a Astronaut who must Succumb a Student in Australia                           | G      |      101.78
+ Kissing Dolls     | A Insightful Reflection of a Pioneer And a Teacher who must Build a Composer in The First Manned Space Station    | R      |       97.85
+ Witches Panic     | A Awe-Inspiring Drama of a Secret Agent And a Hunter who must Fight a Moose in Nigeria                            | G      |       96.77
+(5 rows)
+
