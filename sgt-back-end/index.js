@@ -21,7 +21,7 @@ app.get('/api/grades', (req, res) => {
   db.query(sql)
     .then(result => {
       const grade = result.rows;
-      res.json(grade);
+      res.status(200).json(grade);
     })
     .catch(err => {
       console.error(err);
@@ -29,6 +29,35 @@ app.get('/api/grades', (req, res) => {
         error: 'An unexpected error occured.'
       });
     });
+});
+
+app.post('/api/grades', (req, res) => {
+  res.send(req.body);
+  const name = req.body.name;
+  const course = req.body.course;
+  const score = Number(req.body.score);
+  if (!name || !course || !Number.isInteger(score) || score < 0 || score > 100) {
+    res.status(400).json({
+      error: 'Name, course, and score are required fields. Score must be an integer between 0 and 100'
+    });
+  } else {
+    const sql = `
+      INSERT INTO "grades" ("name", "course", "score")
+      VALUES ($1, $2, $3);
+    `;
+    const params = [name, course, score];
+    db.query(sql, params)
+      .then(result => {
+        const grade = result.rows[0];
+        res.status(201).json(grade);
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({
+          error: 'An unexpected error occured.'
+        });
+      });
+  }
 });
 
 app.listen(3000, () => {
