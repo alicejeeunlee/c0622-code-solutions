@@ -28,13 +28,9 @@ const product = numbers.reduce(
 console.log('product:', product);
 
 const balance = account.reduce(
-  (x, y) => {
-    if (y.type === 'deposit') {
-      return x + y.amount;
-    } else {
-      return x - y.amount;
-    }
-  }, 0
+  (x, y) =>
+    y.type === 'deposit' ? (x + y.amount) : (x - y.amount)
+  , 0
 );
 console.log('balance:', balance);
 
