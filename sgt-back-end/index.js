@@ -62,7 +62,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const course = req.body.course;
   const score = Number(req.body.score);
   const gradeId = Number(req.params.gradeId);
-  if (!Number.isInteger(gradeId) || gradeId < 0 || !name || !course || !Number.isInteger(score) || score < 0 || score > 100) {
+  if (!Number.isInteger(gradeId) || gradeId < 1 || !name || !course || !Number.isInteger(score) || score < 0 || score > 100) {
     res.status(400).json({
       error: 'GradeId must be a positive integer and specified in path. Name, course, and score are required fields. Score must be an integer between 0 and 100'
     });
