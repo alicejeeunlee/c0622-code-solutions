@@ -98,7 +98,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
 app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
-  if (!Number.isInteger(gradeId) || gradeId < 0) {
+  if (!Number.isInteger(gradeId) || gradeId < 1) {
     res.status(400).json({
       error: 'GradeId must be a positive integer.'
     });
@@ -117,7 +117,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
             error: `Cannot find grade with gradeId: ${gradeId}`
           });
         } else {
-          res.status(204).json(grade);
+          res.sendStatus(204);
         }
       })
       .catch(err => {
