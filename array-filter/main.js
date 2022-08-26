@@ -13,13 +13,13 @@ const names = [
 ];
 
 const evenNumbers = numbers.filter(num => num % 2 === 0);
-console.log(evenNumbers);
+console.log('evenNumber:', evenNumbers);
 
 const overFive = numbers.filter(num => num > 5);
-console.log(overFive);
+console.log('overFive:', overFive);
 
 const startWithE = names.filter(name => name.startsWith('E'));
-console.log(startWithE);
+console.log('startWithE:', startWithE);
 
 const haveD = names.filter(name => name.includes('D') || name.includes('d'));
-console.log(haveD);
+console.log('haveD:', haveD);
