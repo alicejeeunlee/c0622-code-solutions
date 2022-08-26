@@ -1,13 +1,10 @@
 const pg = require('pg');
-
-// only create ONE pool for your whole server
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
   ssl: {
     rejectUnauthorized: false
   }
 });
-
 const express = require('express');
 const app = express();
 
@@ -88,6 +85,39 @@ app.put('/api/grades/:gradeId', (req, res) => {
           });
         } else {
           res.status(200).json(grade);
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({
+          error: 'An unexpected error occured'
+        });
+      });
+  }
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = Number(req.params.gradeId);
+  if (!Number.isInteger(gradeId) || gradeId < 0) {
+    res.status(400).json({
+      error: 'GradeId must be a positive integer.'
+    });
+  } else {
+    const sql = `
+      DELETE FROM "grades"
+      WHERE "gradeId" = $1
+      RETURNING *;
+    `;
+    const params = [gradeId];
+    db.query(sql, params)
+      .then(result => {
+        const grade = result.rows[0];
+        if (!grade) {
+          res.status(404).json({
+            error: `Cannot find grade with gradeId: ${gradeId}`
+          });
+        } else {
+          res.status(204).json(grade);
         }
       })
       .catch(err => {
