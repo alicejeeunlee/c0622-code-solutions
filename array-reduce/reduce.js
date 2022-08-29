@@ -1,7 +1,7 @@
 function reduce(array, reducer, initialValue) {
   let index = 0;
   let previous = initialValue;
-  if (initialValue === undefined) {
+  if (arguments.length === 2) {
     index = 1;
     previous = array[0];
   }
