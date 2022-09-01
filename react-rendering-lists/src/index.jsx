@@ -9,19 +9,15 @@ const pokedex = [
   { number: '039', name: 'Jigglypuff' }
 ];
 
-function List(pokemon) {
-  return <li>{pokemon.name}</li>;
-}
-
 function PokemonList(props) {
-  const listItems = pokedex.map(pokemon =>
-    <List key={pokemon.number}/>
+  const listItems = props.pokedex.map(pokemon =>
+    <li key={pokemon.number}>{ pokemon.name }</li>
   );
   return <ul>{listItems}</ul>;
 }
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
-root.render(<PokemonList />);
+root.render(<PokemonList pokedex={pokedex} />);
 
 // More Concise Solution
 // const element = (
