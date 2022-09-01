@@ -10,12 +10,12 @@ const pokedex = [
 ];
 
 function List(pokemon) {
-  return <li>{pokemon.value}</li>;
+  return <li>{pokemon.name}</li>;
 }
 
 function PokemonList(props) {
   const listItems = pokedex.map(pokemon =>
-    <List key={pokemon.number.toString()} value={pokemon.name} />
+    <List key={pokemon.number}/>
   );
   return <ul>{listItems}</ul>;
 }
