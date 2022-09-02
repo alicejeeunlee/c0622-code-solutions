@@ -18,11 +18,9 @@ export default class Accordion extends React.Component {
   }
 
   render() {
-    const reactTopics = [];
-
-    this.props.topics.map(topic => {
+    const reactTopics = this.props.topics.map(topic => {
       const hide = this.state.openTab === topic.name ? '' : 'hidden';
-      return reactTopics.push(
+      return (
         <div key={this.props.topics.indexOf(topic)}>
           <h1 onClick={this.handleClick} data-topic={topic.name}>{topic.name}</h1>
           <p className={hide}>{topic.description}</p>
