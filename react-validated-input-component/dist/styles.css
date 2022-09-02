@@ -1,0 +1,25 @@
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+input {
+  margin-right: 1rem;
+}
+
+p {
+  color: rgb(207 42 41);
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-check {
+  color: rgb(107 168 79);
+}
+
+.fa-xmark {
+  color: rgb(207 42 41);
+}
