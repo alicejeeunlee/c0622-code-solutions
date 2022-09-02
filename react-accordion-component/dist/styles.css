@@ -1,0 +1,25 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: rgb(221 221 221);
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+p {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0;
+  padding: 1rem 0.5rem;
+  line-height: 1.7rem;
+}
+
+.hidden {
+  display: none;
+}
