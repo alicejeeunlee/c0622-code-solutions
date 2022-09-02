@@ -3,18 +3,25 @@ body {
 }
 
 h1 {
-  border: 1px solid black;
-  width: 50%;
+  border: 1px solid white;
+  width: 80%;
   margin: 0;
   padding: 0.5rem;
-  background-color: rgb(221 221 221);
+  background-color: black;
+  color: white;
   font-weight: 100;
   font-size: 2rem;
 }
 
+h1:hover {
+  cursor: pointer;
+}
+
 p {
-  border: 1px solid black;
-  width: 50%;
+  border: 1px solid white;
+  background-color: rgb(205 205 205);
+  color: rgb(27 143 27);
+  width: 80%;
   margin: 0;
   padding: 1rem 0.5rem;
   line-height: 1.7rem;
