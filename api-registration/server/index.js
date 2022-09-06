@@ -48,11 +48,11 @@ app.post('/api/auth/sign-up', (req, res, next) => {
       db.query(sql, params)
         .then(result => {
           const [newUser] = result.rows;
-          res.status(201).json(newUser)
-            .catch(err => next(err));
+          res.status(201).json(newUser);
         })
         .catch(err => next(err));
-    });
+    })
+    .catch(err => next(err));
 });
 
 app.use(errorMiddleware);
