@@ -1,0 +1,131 @@
+# Initialization
+  - Database status is online and new database is created
+  - Necessary schema is created (schema.sql) with one row populated in table (data.sql) by running the shell script command (import.sh)
+  - Server code is initialized at entry point (server/index.js)
+    - Express server communicates to Postgresql database by opening a connection using .Pool method
+      * POST(sign-up):
+        - If client does not provide a username or password
+          - new ClientError is constructed by reading client-error.js
+          - and thrown which triggers app.use(errorMiddleware)
+            - error-middleware.js is read to send a status (400) and message ('username and password are required fields') as a json response to the client
+        - Assuming a username and password is provided by client
+        - argon2
+          - hashes the password
+          - then a SQL query is made to insert the created username and hashedPassword
+          - then the client is send a status (201) and json object containing { userId, username, createdAt }
+          - any errors are caught and dealt with by passing to next function which triggers error-middleware.js
+      * POST (sign-in):
+        - If client does not provide a username or password
+          - new ClientError is thrown and client is sent error status (401) and message ('invalid login') by error-middleware.js
+        - If client provides a username and password
+        - SQL query is made to select userId and hashedPassword only if username in database matched client provided username
+        - then
+          - if user does not exist
+            - new ClientError is thrown and client is sent error status (401) and message ('invalid login') by error-middleware.js
+          - if user exists
+            - argon2 verifies that the hashedPassword and client provided password matches
+            - then
+              - if it does not match, a new ClientError is thrown
+              - otherwise,
+                - the token is signed with a secret (contained in the .env file)
+                - and the client receives a json object that contains the token, userId and username
+        - any errors are caught and dealt with by passing to next function triggering error-middleware.js
+  - Client code is initialized at entry point index.jsx
+    - React, ReactDOM, and App are imported into the module
+    - The div element with id root is queried from index.html and made into a React root
+    - The React element type App is rendered with the React root as its container
+  - app.jsx is read and mounted
+    - App component is constructed with states: user, isAuthorizing, and route and methods: handleSignIn and handleSignOut
+    - Then render() runs
+      - Because this.state.isAuthorizing was initialized as true, render returns null
+    - Then componentDidMount() runs
+      - An asynchrounous hashchange event listener is stored for future callbacks
+      - A token from localStorage is stored in the token variable
+      - The user and isAuthorizing props of this.state is updated to false which triggers a re-render
+    - Then render() runs again
+      - this.state.isAuthorizing is now false
+      - user and route properties are deconstructed from this.state
+      - handleSignIn and handleSignOut methods are deconstructed from this
+      - user, route, handleSignIn, and handleSignOut are all assigned to context to make these variables and methods globally available for other components
+      - the Navbar component is called
+        - navbar.jsx is read and rendered
+      - the PageContainer component is called
+        - page-container.jsx is read and returned a div container structure with children props
+      - the children of PageContainer contains a call to the renderPage() method
+      - renderPage() is called
+        - path is currently and empty string
+        - the Home component is returned
+      - home.jsx is read and rendered
+        - user is currently false, returns Redirect component
+      - redirect.jsx is read
+        - new URL with the window location is created and assigned to url
+        - Home component passed props to='sign-in'
+        - because props.to is not an empty string
+        - the url is replaced to '#sign-in'
+    - this.state.route is updated because parseRoute has a new window.location.hash
+    - App is re-rendered
+      - Content is updated to reflect changed route prop and this.renderPage() is called again
+      - path is now 'sign-in', so Auth component is returned
+    - auth.jsx is read and rendered
+      - because user is still false, welcomeMessage is 'Please sign in to continue'
+      - AuthForm component is called
+    - auth-form.jsx is read
+      - constructor is defined to have state: username and password, and methods: handleChange and handleSubmit
+      - form is rendered onto the page
+
+# User can sign up
+  - Client clicks either the 'Sign Up' anchor on the Navbar or 'Register Now' anchor
+    - url hash changes to '#sign-up' which updates this.state.route in App triggering a re-render to show the Sign Up form
+  - As the client types username and password into input fields
+    - handleChange method of the AuthForm component which updates this.state.username and this.state.password
+    - triggering a re-render of the AuthForm to reflect each keydown event
+  - When the client submits form
+    - handleSubmit method of the AuthForm component is called to send a POST request to '/api/auth/sign-up'
+      - Express handles the request to sign up as mentioned in the initialization process
+      - If the POST request is successful, the userId, username, and createdAt record is sent to the client as a json object
+      - Then URL hash is changed to 'sign-in'
+        - Updating app.state.route which re-renders App, Auth, and AuthForm components to the 'sign-in' view
+
+# User can sign in
+  - Client inputs username and password to sign in and submits the form
+  - A POST request is sent to '/api/auth/sign-in'
+    - Express handles the request to sign in as mentioned in the initialization process
+    - If POST request is successful and user recieves a user and token in the response
+      - this.props.onSignIn is called with the result as its argument
+      - triggering the handleSignIn method of the App component via Context
+  - handleSignIn(result)
+    - stores the token into local storage be destructuring from the json result object
+    - this.state.user is updated to the current user that signed in triggering a re-render of App
+    - path is still 'sign-in', return Auth
+    - auth.jsx is read
+      - now that user is truthy, return Redirect with prop to=""
+    - redirect.jsx is read
+      - props.to is an empty string so url.hash is assigned '#'
+      - this.state.route is updated again in the App component
+  - parseRoute parses the current '#' hash url to an empty string triggering a re-render of App
+  - Because path is now an empty string, return Home component
+  - home.jsx is read and rendered
+    - because this.context.user has a value thus truthy, the condition evaluates to false and client gets **RICK ROLLED**
+
+# User can stay signed in
+  - Upon refreshing the page, App component will unmount and mount again
+  - After the first render is complete, componentDidMount is called
+    - It retrieves the token stored in local storage
+    - If there is a token, jwtDecode decodes the token
+    - this.state.user is updated with the token triggering a re-render
+      - Navbar, PageContainer, Auth components are re-rendered
+      - in auth.jsx user is now truthy so Redirect component is called with props to=""
+      - Redirect replaces the url to '#'
+      - Updating this.state.route in App to an empty string after parseRoute function is called, triggering a re-render
+      - now that path is an empty string, renderPage() calls the Home component, allowing the user to stay signed on
+
+# User can sign out
+  - Client clickes the 'Sign out' button on the Navbar
+  - Which calls the handleSignOut method of App Component via Context
+    - handleSignOut() removes the token from local storage and sets this.state.user to null, triggering a re-render
+    - because path is still an empty string Navbar, PageContainer, Home components are re-rendered
+    - home.jsx is read and because user is null and falsy, the condition evaluates to true
+      - Redirect comoponent is called with props to='sign-in'
+      - redirect.jsx is read and the url is now replaced to 'sign-in'
+      - this updates the state of route in app.jsx so the App component is rerendered
+        - because the path is now 'sign-in' Navbar, PageContainer, Auth is re-rendered to show the sign-in view
