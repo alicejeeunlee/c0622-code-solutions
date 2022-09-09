@@ -1,0 +1,45 @@
+.carousel {
+  width: 30rem;
+  height: 30rem;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.arrows {
+  cursor: pointer;
+  margin: 0 2rem;
+}
+
+.dot {
+  cursor: pointer;
+}
+
+.icon-wrapper {
+  padding: 0 10rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.image-wrapper {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 20rem;
+}
