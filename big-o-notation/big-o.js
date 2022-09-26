@@ -28,7 +28,7 @@ function uniqueQuadratic(words) {
     let isUnique = true;            // 1 * n = O(n) -- assign value to variable; in loop code block
     for (
       let c = 0;                    // 1 * n = O(n) -- nested loop (*n)
-      c < i;                        // 2 * n^2 ~= O(n^2) -- get values, comparison
+      c < i;                        // 2 * n^2 ~= O(n^2) -- QUADRATIC time: comparison, test
       c++                           // 2 * n^2 ~= O(n^2) -- increment, reassign
     ) {
       const comparing = words[c];   // 2 * n^2 ~= O(n^2) -- get element words[c], reassign to comparing; nested loop code block (*n)
