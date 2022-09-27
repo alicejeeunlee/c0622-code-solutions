@@ -10,4 +10,13 @@ function takeValueAtIndex(queue, index) {
     count++;
   }
   return queue.dequeue();
+  // solution:
+  // if (queue.peek() === undefined) {
+  //   return undefined;
+  // }
+  // while (index > 0) {
+  //   queue.enqueue(queue.dequeue());
+  //   index--;
+  // }
+  // return queue.dequeue();
 }

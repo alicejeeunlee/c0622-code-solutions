@@ -9,4 +9,11 @@ function takeNextSmallest(queue) {
     successor = queue.peek();
   }
   return first;
+  // solution:
+  // let nextSmallest = queue.dequeue();
+  // while (nextSmallest > queue.peek()) {
+  //   queue.enqueue(nextSmallest);
+  //   nextSmallest = queue.dequeue();
+  // }
+  // return nextSmallest;
 }
