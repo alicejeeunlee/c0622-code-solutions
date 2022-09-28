@@ -5,5 +5,4 @@ function updateNext(list, value) {
     return;
   }
   list.next.data = value;
-  return list;
 }
