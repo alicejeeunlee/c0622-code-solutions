@@ -9,23 +9,36 @@
 <body>
   <script>
     const makeCounter = function () {
-      let privateCounter = 0;
-      function changeBy(val) {
-        privateCounter += val;
-      }
+      let count = 0;
       return {
-        increment() {
-          changeBy(1);
+        increment: function () {
+          count += 1;
         },
-
-        decrement() {
-          changeBy(-1);
+        decrement: function () {
+          count -= 1;
         },
-
-        value() {
-          return privateCounter;
+        value: function () {
+          return count;
         }
-      };
+  };
+      // MDN EXAMPLE:
+      // let privateCounter = 0;
+      // function changeBy(val) {
+      //   privateCounter += val;
+      // }
+      // return {
+      //   increment() {
+      //     changeBy(1);
+      //   },
+
+      //   decrement() {
+      //     changeBy(-1);
+      //   },
+
+      //   value() {
+      //     return privateCounter;
+      //   }
+      // };
     };
 
     const counter1 = makeCounter();
